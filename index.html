@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>دكتورتنا الغالية ميرڤت ❤️</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #c9d8c5;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 28px;
+      padding: 36px 26px;
+      text-align: center;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 22px 45px rgba(0, 0, 0, 0.18);
+      z-index: 2;
+    }
+
+    h1 {
+      margin: 0 0 30px;
+      font-size: 1.9rem;
+      line-height: 1.4;
+    }
+
+    button {
+      font-size: 1.05rem;
+      padding: 16px 28px;
+      border: none;
+      border-radius: 40px;
+      background: #8fb39c;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+      width: 100%;
+      max-width: 280px;
+    }
+
+    button:hover {
+      background: #7aa78f;
+      transform: scale(1.04);
+    }
+
+    .quote {
+      margin-top: 35px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      min-height: 110px;
+      padding: 0 6px;
+    }
+
+    .emoji {
+      position: absolute;
+      font-size: 1.8rem;
+      opacity: 0.6;
+      animation: floatUp linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(110vh); }
+      to { transform: translateY(-130vh); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>دكتورتنا الغالية ميرڤت ❤️</h1>
+    <button onclick="showQuote()">PRESS ME FOR A GREAT TIME !</button>
+    <div class="quote" id="quote"></div>
+  </div>
+
+  <script>
+    const quotes = [
+      "ميرڤت your kindness shows even when the day is heavy.",
+      "ميرڤت you make people feel respected just by listening.",
+      "Your patience says more than words ever could.",
+      "ميرڤت your calm presence makes everything feel manageable.",
+      "You lead with integrity and people notice.",
+      "ميرڤت your empathy is one of your strongest qualities.",
+      "You treat people fairly and that defines true strength.",
+      "ميرڤت you bring reassurance without trying.",
+      "Your character leaves a lasting impression.",
+      "ميرڤت people feel safe when you are around.",
+
+      "You are trusted because you earn it every day.",
+      "ميرڤت your decisions are thoughtful and steady.",
+      "You bring clarity where others bring stress.",
+      "ميرڤت responsibility fits you naturally.",
+      "Your professionalism never loses warmth.",
+      "ميرڤت you elevate everyone around you.",
+      "You handle challenges with wisdom.",
+      "ميرڤت your presence improves teamwork.",
+      "You make difficult moments easier.",
+      "ميرڤت your effort truly matters.",
+
+      "You are doing meaningful work.",
+      "ميرڤت today is better because you showed up.",
+      "You are allowed to be proud of yourself.",
+      "ميرڤت progress looks like you.",
+      "You make a difference even on quiet days.",
+      "ميرڤت your consistency builds trust.",
+      "You turn effort into results.",
+      "ميرڤت your strength is steady and real.",
+      "You bring calm where it is needed most.",
+      "ميرڤت you are exactly where you should be.",
+
+      "You look great today and confidence suits you.",
+      "ميرڤت you look great today and your calm energy shows.",
+      "You look great today and positivity fits you.",
+      "ميرڤت you look great today and it did not go unnoticed.",
+      "You look great today and your presence matters.",
+      "ميرڤت you look great today and balance suits you.",
+      "You look great today and your smile helps.",
+      "ميرڤت you look great today and strength shows.",
+      "You look great today and optimism follows.",
+      "ميرڤت you look great today and purpose agrees.",
+
+      "You improve spaces just by being in them.",
+      "ميرڤت your way of caring makes a difference.",
+      "You make people feel understood.",
+      "ميرڤت your calm leadership is appreciated.",
+      "You handle people with patience and respect.",
+      "ميرڤت today is lucky to have you.",
+      "You are doing an amazing job.",
+      "ميرڤت your presence truly matters."
+    ];
+
+    function showQuote() {
+      const index = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").textContent = quotes[index];
+    }
+
+    function createEmoji() {
+      const emoji = document.createElement("div");
+      emoji.className = "emoji";
+      emoji.textContent = Math.random() > 0.5 ? "🪭" : "🥂";
+      emoji.style.left = Math.random() * 100 + "vw";
+      emoji.style.animationDuration = (15 + Math.random() * 10) + "s";
+      document.body.appendChild(emoji);
+      setTimeout(() => emoji.remove(), 26000);
+    }
+
+    setInterval(createEmoji, 950);
+  </script>
+
+</body>
+</html>
